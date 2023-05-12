@@ -17,4 +17,4 @@
 // リンク時のセクション名は、CROM_CRC_CODE_2　となる。　(2は 2byteのため) 
 #pragma section   ROM_CRC_CODE
 
-const uint16_t  rom_crc_data = 0x5497;     // CS+により出力された、CRC値を記入する。
+const uint16_t  rom_crc_data = 0x7414;     // CS+により出力された、CRC値を記入する。
