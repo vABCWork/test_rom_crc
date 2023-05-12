@@ -84,13 +84,7 @@ void (*const Except_Vectors[])(void) = {
     Dummy,
     
 // 0xffffff88  OFS1 register
-//
-// 「リンケージエディタとCRC演算器のCRC-CCITT結果の違い」 (https://ja-support.renesas.com/knowledgeBase/17796715)
-//  FINE接続でマイコンと接続している場合(JTAG接続の場合は該当しません)、E1またはE20エミュレータ起動時に
-//  エミュレータ制御用のコードとしてオプション機能選択レジスタ1(OFS1：アドレスFFFFFF88h-FFFFFF8Bh)のbit24に0が書き込まれます。
-// 
-
-    (void (*)(void))0xfeffffff, // OFS1
+    (void (*)(void))0xffffffff, // OFS1
     
 // 0xffffff8c  OFS0 register
     (void (*)(void))0xffffffff, // OFS0
