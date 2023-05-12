@@ -13,7 +13,7 @@ uint16_t	invert_crc;	// 反転値
 // CRC計算のテスト
 //  ビルド時リンカーから出力されたCRC値(rom_crc_data)とCRC演算器で計算してビット反転した値(inver_crc)が一致すれば、
 //  CRCが一致している。
-//  CRC計算範囲は、 0xfffc0100～0xffffffff
+//  CRC計算範囲は、 0xfffc0100～0xffffff7f
 //
 //
 // CRC演算器：
@@ -35,7 +35,7 @@ void ROM_CRC_Err_Check(void)
 	
 	
 	start_adrs = 0xfffc0100;	     // プログラム先頭アドレス
-	end_adrs = 0xffffffff;	             // 最終アドレス
+	end_adrs = 0xffffff7f;	             // 最終アドレス
 	
 	
 	pt = (uint8_t *)start_adrs;
